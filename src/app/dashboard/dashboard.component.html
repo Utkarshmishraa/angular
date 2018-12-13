@@ -1,0 +1,16 @@
+<mat-card >
+    <div fxLayout="row" fxFlex="100%">
+        <div fxFlex="30%" fxLayoutAlign="start">
+            <h2>Search Movies List</h2>
+        </div>
+        <div fxFlex="70%" fxLayoutAlign="end">
+            <input matInput fxFlex="50%" type="search" placeholder="Movies List" [(ngModel)]="movie" (ngModelChange)="searchMovie(movie)">
+            <button mat-button mat-raised-button color="primary" (click)="searchMovie(movie)" fxFlex="50%">Search</button>
+        </div>
+    </div>
+</mat-card>
+<div>
+    <movie-list fxLayoutGap="1rem" [movieList]="movieList"></movie-list>
+</div>
+
+<!-- <content-view></content-view> -->
